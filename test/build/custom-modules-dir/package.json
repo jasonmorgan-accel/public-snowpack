@@ -1,6 +1,8 @@
 {
+  "description": "This test ensures that Snowpack can build when /my_modules is the web modules dir",
   "scripts": {
-    "TEST": "node ../../../pkg/dist-node/index.bin.js build"
+    "prepare": "node ../../../pkg/dist-node/index.bin.js",
+    "TEST": "NODE_ENV=production node ../../../pkg/dist-node/index.bin.js build"
   },
   "snowpack": {
     "scripts": {
